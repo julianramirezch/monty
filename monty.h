@@ -94,7 +94,7 @@ void queue(st_va *var);
 void free_list(stack_t *head);
 size_t print_dlistint(const stack_t *h);
 size_t dlistint_len(const stack_t *h);
-stack_t *add_dnodeint(stack_t **head, const int n);
+stack_t *add_dnodeint(stack_t **head, const int n, st_va *var);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
 int sum_dlistint(stack_t *head);
