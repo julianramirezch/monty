@@ -19,11 +19,9 @@ int check_number(char *number)
 			else
 				return (1);
 		}
-		if (number[i] < '0' && number[i] > '9')
-		{
-			if (number[i] != '-')
-				return (1);
-		}
+
+		if (!(number[i] >= '0' && number[i] <= '9'))
+			return (1);
 	}
 	return (0);
 }
