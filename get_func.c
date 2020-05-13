@@ -10,6 +10,7 @@ int get_func(void)
 
 	int i = 0;
 	int l_n = vari.line_number;
+	int check = 0;
 
 	instruction_t cmd[] = {
 		{"pall", pall},
@@ -22,7 +23,10 @@ int get_func(void)
 		if (strcmp(vari.cm, cmd[i].opcode) == 0)
 		{
 			cmd[i].f(vari.head, vari.line_number);
-			return (0);
+			if (vari.status == -1)
+				return (-1);
+			else
+				return (0);
 		}
 		i++;
 	}

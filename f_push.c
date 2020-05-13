@@ -6,7 +6,7 @@
  * @line_number: Line number
  */
 
-void push(stack_t **stack, unsigned int line_number)
+int push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *newn;
 	(void)line_number;
@@ -30,4 +30,5 @@ void push(stack_t **stack, unsigned int line_number)
 		newn->next->prev = newn;
 
 	*stack = newn;
+	return(0);
 }
