@@ -27,5 +27,5 @@ int get_func(st_va *var)
 		i++;
 	}
 	dprintf(STDOUT_FILENO, "L%i: unknown instruction %s\n", l_n, var->cm);
-	return (1);
+	return (-1);
 }
