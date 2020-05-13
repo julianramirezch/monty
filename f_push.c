@@ -8,8 +8,8 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	(void)line_number;
 	stack_t *newn;
+	(void)line_number;
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
