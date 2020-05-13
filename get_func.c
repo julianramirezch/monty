@@ -9,7 +9,7 @@ int get_func(void)
 {
 
 	int i = 0;
-	unsigned int l_n = vari.line_number;
+	int l_n = vari.line_number;
 
 	instruction_t cmd[] = {
 		{"pall", pall},
