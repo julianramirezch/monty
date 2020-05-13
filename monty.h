@@ -10,7 +10,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#define del " \t\n\r"
 
 /*STRUCTS*/
 
@@ -30,7 +29,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-/**********************************************************************/
 
 /**
  * struct var - global structure for monty project
@@ -55,8 +53,8 @@ typedef struct var
 	stack_t **head;
 } st_va;
 
+/* GLOBAL */
 extern st_va vari;
-/**********************************************************************/
 
 /**
  * struct instruction_s - opcode and its function
@@ -72,33 +70,16 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-/**********************************************************************/
 
 /*FUNCTIONS*/
 int principal(stack_t **head);
 int tokens(void);
 int check_number(char *number);
 int get_func(void);
-void add(st_va *var);
-void nop(st_va *var);
 void pall(stack_t **stack, unsigned int line_number);
-void pint(st_va *var);
-void pop(st_va *var);
 void push(stack_t **stack, unsigned int line_number);
-void swap(st_va *var);
-void stack(st_va *var);
-void queue(st_va *var);
 
 /*LIST FUNCTIONS*/
 void free_list(stack_t *head);
-void print_dlistint(const stack_t *h);
-size_t dlistint_len(const stack_t *h);
-stack_t *add_dnodeint(stack_t **head, const int n, st_va *var);
-stack_t *add_dnodeint_end(stack_t **head, const int n);
-stack_t *get_dnodeint_at_index(stack_t *head, unsigned int index);
-int sum_dlistint(stack_t *head);
-stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
-int delete_dnodeint_at_index(stack_t **head, unsigned int index);
-
 
 #endif

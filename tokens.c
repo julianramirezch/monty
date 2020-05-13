@@ -13,13 +13,13 @@ int tokens(void)
 	if (vari.line == NULL || vari.line[0] == '\n')
 		return (1);
 
-	vari.cm = strtok(vari.line, del);
+	vari.cm = strtok(vari.line, " \t\n");
 	if (vari.cm == NULL || vari.cm[0] == '#')
 		return (1);
 
 	if (strcmp(vari.cm, "push") == 0)
 	{
-		num = strtok(NULL, del);
+		num = strtok(NULL, " \t\n");
 		check = check_number(num);
 		if (num == NULL || check == 1)
 		{
