@@ -7,17 +7,18 @@
 
 void push(st_va *var)
 {
-	add_dnodeint(var->head, var->number);
+	add_dnodeint(var->head, var->number, var);
 }
 
 /**
  * add_dnodeint - adds a newnode at the beginning of a dlistint_t list.
  * @head: Pointer to struct
  * @n: Integer
+ * @var: Globar structure
  * Return: New Node
  */
 
-stack_t *add_dnodeint(stack_t **head, const int n)
+stack_t *add_dnodeint(stack_t **head, const int n, st_va *var)
 {
 	stack_t *newn, *aux;
 
@@ -25,6 +26,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	if (newn == NULL)
 	{
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
+		var->status = -1;
 		return (free(newn), NULL);
 	}
 	newn->n = n;
