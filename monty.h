@@ -92,7 +92,7 @@ void queue(st_va *var);
 
 /*LIST FUNCTIONS*/
 void free_list(stack_t *head);
-size_t print_dlistint(const stack_t *h);
+void print_dlistint(const stack_t *h);
 size_t dlistint_len(const stack_t *h);
 stack_t *add_dnodeint(stack_t **head, const int n, st_va *var);
 stack_t *add_dnodeint_end(stack_t **head, const int n);

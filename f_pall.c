@@ -16,21 +16,17 @@ void pall(st_va *var)
  * Return: 0 if no elements , i is number of elements
  */
 
-size_t print_dlistint(const stack_t *h)
+void print_dlistint(const stack_t *h)
 {
 	const stack_t *aux;
-	int i = 0;
 
 	if (!h)
-		return (0);
+		return;
 
 	aux = h;
 	while (aux)
 	{
 		printf("%i\n", aux->n);
 		aux = aux->next;
-		i++;
 	}
-
-	return (i);
 }
