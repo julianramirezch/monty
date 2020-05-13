@@ -26,6 +26,6 @@ int get_func(void)
 		}
 		i++;
 	}
-	dprintf(STDOUT_FILENO, "L%i: unknown instruction %s\n", l_n, vari.cm);
+	dprintf(STDERR_FILENO, "L%i: unknown instruction %s\n", l_n, vari.cm);
 	return (-1);
 }
