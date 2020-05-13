@@ -25,7 +25,7 @@ int tokens(st_va *var)
 		if (num == NULL || check == 1)
 		{
 			dprintf(STDOUT_FILENO, "L%i: usage: push integer\n", l_n);
-			return (1);
+			return (-1);
 		}
 		var->number = atoi(num);
 	}
