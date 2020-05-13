@@ -10,7 +10,6 @@ int get_func(void)
 
 	int i = 0;
 	int l_n = vari.line_number;
-	int check = 0;
 
 	instruction_t cmd[] = {
 		{"pall", pall},
