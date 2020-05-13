@@ -33,7 +33,7 @@ int main(int ac, char **av)
 	while ((chars = getline(&var.line, &var.len, var.fd)) != -1)
 	{
 		pri = principal(&var, &head);
-		if (pri == 1)
+		if (pri == -1 || var.status == -1)
 		{
 			free(var.line);
 			free_list(head);
