@@ -21,7 +21,6 @@ void push(st_va *var)
 stack_t *add_dnodeint(stack_t **head, const int n, st_va *var)
 {
 	stack_t *newn, *aux;
-	int l_n = var->line_number;
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
