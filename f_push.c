@@ -23,13 +23,6 @@ stack_t *add_dnodeint(stack_t **head, const int n, st_va *var)
 	stack_t *newn, *aux;
 	int l_n = var->line_number;
 
-	if (head == NULL)
-	{
-		dprintf(STDOUT_FILENO, "L%i: usage: push integer\n", l_n);
-		var->status = -1;
-		return (NULL);
-	}
-
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
 	{
