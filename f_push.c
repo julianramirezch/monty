@@ -2,32 +2,32 @@
 
 /**
  * push - pushes an element to the stack.
- * @var: Global structure
+ * @stack: Pointer to struct
+ * @line_number: Line number
  */
 
-void push(st_va *var)
+void push(stack_t **stack, unsigned int line_number)
 {
-	/* add_dnodeint(var->head, var->number, var);*/
+	(void)line_number;
 	stack_t *newn;
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
 	{
 		dprintf(STDOUT_FILENO, "Error: malloc failed\n");
-		var->status = -1;
-		free(newn);
+		vari.status = -1;
 		return;
 	}
-	newn->n = var->number;
+	newn->n = vari.number;
 	newn->prev = NULL;
 
-	if (*var->head == NULL)
+	if (*stack == NULL)
 		newn->next = NULL;
 	else
-		newn->next = *var->head;
+		newn->next = *stack;
 
 	if (newn->next != NULL)
 		newn->next->prev = newn;
 
-	*var->head = newn;
+	*stack = newn;
 }

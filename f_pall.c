@@ -2,14 +2,16 @@
 
 /**
  * pall -  prints all the values on the stack
- * @var: Globar Structure
+ * @stack: Pointer to struct
+ * @line_number: Line number
  */
 
-void pall(st_va *var)
+void pall(stack_t **stack, unsigned int line_number)
 {
+	(void) line_number;
 	stack_t *aux;
 
-	aux = *var->head;
+	aux = *stack;
 	while (aux)
 	{
 		printf("%i\n", aux->n);

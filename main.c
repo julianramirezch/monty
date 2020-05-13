@@ -1,5 +1,7 @@
 #include "monty.h"
 
+st_va vari;
+
 /**
  * main - Entry Point
  * @ac: argc
@@ -12,38 +14,37 @@ int main(int ac, char **av)
 	int pri;
 	ssize_t chars;
 	stack_t *head = NULL;
-	st_va var;
 
-	var.len = 0, var.line = NULL, var.line_number = 1, var.fd = NULL;
-	var.number = 0, var.status = 0;
+	vari.len = 0, vari.line = NULL, vari.line_number = 1, vari.fd = NULL;
+	vari.number = 0, vari.status = 0;
 
 	if (ac != 2)
 	{
-		dprintf(STDOUT_FILENO, "USAGE: monty file\n");
+		dprintf(STDERR_FILENO, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
-	var.fd = fopen(av[1], "r");
-	if (var.fd == NULL)
+	vari.fd = fopen(av[1], "r");
+	if (vari.fd == NULL)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 
-	while ((chars = getline(&var.line, &var.len, var.fd)) != -1)
+	while ((chars = getline(&vari.line, &vari.len, vari.fd)) != -1)
 	{
-		pri = principal(&var, &head);
-		if (pri == -1 || var.status == -1)
+		pri = principal(&head);
+		if (pri == -1 || vari.status == -1)
 		{
-			free(var.line);
+			free(vari.line);
 			free_list(head);
-			fclose(var.fd);
+			fclose(vari.fd);
 			exit(EXIT_FAILURE);
 		}
-		var.line_number++;
+		vari.line_number++;
 	}
-	free(var.line);
+	free(vari.line);
 	free_list(head);
-	fclose(var.fd);
+	fclose(vari.fd);
 	return (0);
 }

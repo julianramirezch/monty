@@ -2,21 +2,20 @@
 
 /**
  * principal - Function principal of the project
- * @var: Global struct
  * @head: Pointer to head struct stack_s
  * Return: 0 on succes, -1 in failure
  */
 
-int principal(st_va *var, stack_t **head)
+int principal(stack_t **head)
 {
 	int token;
 	int get;
 
-	var->head = head;
-	token = tokens(var);
+	vari.head = head;
+	token = tokens();
 	if (token == 0)
 	{
-		get = get_func(var);
+		get = get_func();
 		if (get == -1)
 			return (-1);
 	}

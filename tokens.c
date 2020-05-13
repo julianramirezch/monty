@@ -2,23 +2,22 @@
 
 /**
  * tokens - Function tokens
- * @var: Global struct
  * Return: 0 on succes., 1 on failure
  */
 
-int tokens(st_va *var)
+int tokens(void)
 {
 	char *num = NULL;
-	int l_n = var->line_number, check;
+	int l_n = vari.line_number, check;
 
-	if (var->line == NULL || var->line[0] == '\n')
+	if (vari.line == NULL || vari.line[0] == '\n')
 		return (1);
 
-	var->cm = strtok(var->line, del);
-	if (var->cm == NULL || var->cm[0] == '#')
+	vari.cm = strtok(vari.line, del);
+	if (vari.cm == NULL || vari.cm[0] == '#')
 		return (1);
 
-	if (strcmp(var->cm, "push") == 0)
+	if (strcmp(vari.cm, "push") == 0)
 	{
 		num = strtok(NULL, del);
 		check = check_number(num);
@@ -27,7 +26,7 @@ int tokens(st_va *var)
 			dprintf(STDOUT_FILENO, "L%i: usage: push integer\n", l_n);
 			return (-1);
 		}
-		var->number = atoi(num);
+		vari.number = atoi(num);
 	}
 
 	return (0);

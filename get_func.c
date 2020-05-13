@@ -2,14 +2,14 @@
 
 /**
  * get_func - Find the function
- * @var: Global struct
  * Return: 0 on succes, -1 on failure
  */
 
-int get_func(st_va *var)
+int get_func(void)
 {
+
 	int i = 0;
-	unsigned int l_n = var->line_number;
+	unsigned int l_n = vari.line_number;
 
 	instruction_t cmd[] = {
 		{"pall", pall},
@@ -19,13 +19,13 @@ int get_func(st_va *var)
 
 	while (cmd[i].opcode)
 	{
-		if (strcmp(var->cm, cmd[i].opcode) == 0)
+		if (strcmp(vari.cm, cmd[i].opcode) == 0)
 		{
-			cmd[i].f(var);
+			cmd[i].f(vari.head, vari.line_number);
 			return (0);
 		}
 		i++;
 	}
-	dprintf(STDOUT_FILENO, "L%i: unknown instruction %s\n", l_n, var->cm);
+	dprintf(STDOUT_FILENO, "L%i: unknown instruction %s\n", l_n, vari.cm);
 	return (-1);
 }

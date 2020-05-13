@@ -10,8 +10,6 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-
-/* GLOBAL */
 #define del " \t\n\r"
 
 /*STRUCTS*/
@@ -57,6 +55,7 @@ typedef struct var
 	stack_t **head;
 } st_va;
 
+extern st_va vari;
 /**********************************************************************/
 
 /**
@@ -70,22 +69,22 @@ typedef struct var
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(st_va *var);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**********************************************************************/
 
 /*FUNCTIONS*/
-int principal(st_va *var, stack_t **head);
-int tokens(st_va *var);
-int get_func(st_va *var);
+int principal(stack_t **head);
+int tokens(void);
 int check_number(char *number);
+int get_func(void);
 void add(st_va *var);
 void nop(st_va *var);
-void pall(st_va *var);
+void pall(stack_t **stack, unsigned int line_number);
 void pint(st_va *var);
 void pop(st_va *var);
-void push(st_va *var);
+void push(stack_t **stack, unsigned int line_number);
 void swap(st_va *var);
 void stack(st_va *var);
 void queue(st_va *var);
