@@ -40,3 +40,8 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 | `rotr()`      | rotates the stack to the bottom.       |
 | `sub()`      | subtracts the top element of the stack from the second top element of the stack.       |
 | `swap()`      |  swaps the top two elements of the stack.       |
+
+## Author:
+----
+Julian Ramirez  <julianramirezch1@gmail.com> 2020
+[![Twitter Follow](https://img.shields.io/twitter/follow/maktub82.svg?style=social&label=Follow)](https://twitter.com/JulianR_30)
