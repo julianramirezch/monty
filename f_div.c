@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div -   divides the second top element of the stack by the top
+ * _div -   divides the second top element of the stack by the top
  * @stack: Pointer to struct
  * @line_number: Line number
  */
