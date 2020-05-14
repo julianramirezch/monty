@@ -20,6 +20,9 @@ int get_func(void)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"div", div},
+		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
