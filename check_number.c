@@ -10,6 +10,9 @@ int check_number(char *number)
 {
 	int i;
 
+	if (number == NULL)
+		return (1);
+
 	for (i = 0; number[i]; i++)
 	{
 		if (number[i] == '-' && i == 0)
