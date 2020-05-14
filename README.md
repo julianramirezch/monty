@@ -1,7 +1,10 @@
-# Interpreter For Monty Bytecodes Files
-[![](http://montyscoconut.github.io/assets/ico/avatar.png)](http://montyscoconut.github.io/ "Monty Language Interpreter")
+<p align="center">
 
-## The Monty programming language
+# Interpreter For Monty Bytecodes Files
+<p align="center">
+[![](http://montyscoconut.github.io/assets/ico/avatar.png)](http://montyscoconut.github.io/ "Monty Language Interpreter")
+<p align="center">
+**The Monty programming language**
                 
 ----
 **Monty 0.98** is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it.The goal of this project is to create an interpreter for Monty ByteCodes files.
