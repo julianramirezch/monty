@@ -10,7 +10,12 @@ void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *aux;
 	int top;
+	int len;
 	(void) line_number;
+
+	len = dlistint_len(aux);
+	if (len < 2)
+		return;
 
 	aux = *stack;
 	top = aux->n;
