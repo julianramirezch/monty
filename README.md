@@ -4,7 +4,7 @@
    <a href="http://montyscoconut.github.io/"><img src="http://montyscoconut.github.io/assets/ico/avatar.png"/></a>
 
 <p align="center"> 
-The Monty programming language
+   <b>The Monty programming language</b>
                 
 ----
 **Monty 0.98** is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it.The goal of this project is to create an interpreter for Monty ByteCodes files.
