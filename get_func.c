@@ -14,6 +14,7 @@ int get_func(void)
 	instruction_t cmd[] = {
 		{"pall", pall},
 		{"push", push},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
