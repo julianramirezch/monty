@@ -8,16 +8,8 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *newn;
-	int l_n = vari.line_number;
+	stack_t *newn, *aux;
 	(void)line_number;
-
-	if (stack == NULL)
-	{
-		dprintf(STDERR_FILENO, "L%i: usage: push integer\n", l_n);
-		vari.status = -1;
-		return;
-	}
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
@@ -28,14 +20,18 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	newn->n = vari.number;
 	newn->prev = NULL;
+	newn->next = NULL;
 
 	if (*stack == NULL)
-		newn->next = NULL;
-	else
-		newn->next = *stack;
+	{
+		*stack = newn;
+		(*stack)->next = NULL;
+		(*stack)->prev = NULL;
+		return;
+	}
 
-	if (newn->next != NULL)
-		newn->next->prev = newn;
-
+	aux = *stack;
+	newn->next = aux;
+	aux->prev = newn;
 	*stack = newn;
 }
