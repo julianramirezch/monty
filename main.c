@@ -20,14 +20,14 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		dprintf(STDERR_FILENO, "USAGE: monty file\n");
+		dprintf(2, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
 	vari.fd = fopen(av[1], "r");
 	if (vari.fd == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", av[1]);
+		dprintf(2, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 

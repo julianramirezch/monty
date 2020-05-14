@@ -23,7 +23,7 @@ int tokens(void)
 		check = check_number(num);
 		if (num == NULL || check == 1)
 		{
-			dprintf(STDERR_FILENO, "L%i: usage: push integer\n", l_n);
+			dprintf(2, "L%i: usage: push integer\n", l_n);
 			return (-1);
 		}
 		vari.number = atoi(num);
