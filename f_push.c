@@ -9,7 +9,15 @@
 void push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *newn;
+	int l_n = vari.line_number;
 	(void)line_number;
+
+	if (stack == NULL)
+	{
+		dprintf(STDERR_FILENO, "L%i: usage: push integer\n", l_n);
+		vari.status = -1;
+		return;
+	}
 
 	newn = malloc(sizeof(stack_t));
 	if (newn == NULL)
