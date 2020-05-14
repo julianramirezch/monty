@@ -23,6 +23,15 @@ void _div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
+	if (aux->n == 0)
+	{
+		dprintf(2, "L%i: division by zero\n", l_n);
+		free(vari.line);
+		free_list(*vari.head);
+		fclose(vari.fd);
+		exit(EXIT_FAILURE);
+	}
+
 	res = (aux->next->n) / (aux->n);
 	(*stack)->next->n = res;
 	pop(stack, line_number);
