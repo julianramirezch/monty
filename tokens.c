@@ -24,7 +24,10 @@ int tokens(void)
 		if (num == NULL || check == 1)
 		{
 			dprintf(2, "L%i: usage: push integer\n", l_n);
-			return (-1);
+			free(vari.line);
+			free_list(*vari.head);
+			fclose(vari.fd);
+			exit(EXIT_FAILURE);
 		}
 		vari.number = atoi(num);
 	}

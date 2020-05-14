@@ -31,13 +31,14 @@ int get_func(void)
 		if (strcmp(vari.cm, cmd[i].opcode) == 0)
 		{
 			cmd[i].f(vari.head, vari.line_number);
-			if (vari.status == -1)
-				return (-1);
-			else
-				return (0);
+			return (0);
 		}
 		i++;
 	}
 	dprintf(2, "L%i: unknown instruction %s\n", l_n, vari.cm);
-	return (-1);
+	free(vari.line);
+	free_list(*vari.head);
+	fclose(vari.fd);
+	exit(EXIT_FAILURE);
+	return (1);
 }

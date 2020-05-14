@@ -9,24 +9,14 @@
 int principal(stack_t **head)
 {
 	int token;
-	int get;
 
 	vari.head = head;
 	token = tokens();
 	if (token == 0)
-	{
-		get = get_func();
-		if (get == -1)
-			return (-1);
-	}
+		get_func();
 
 	if (token == 1)
 		return (1);
-
-	if (token == -1)
-	{
-		return (-1);
-	}
 
 	return (0);
 }

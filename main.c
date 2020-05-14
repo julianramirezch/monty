@@ -11,7 +11,6 @@ st_va vari;
 
 int main(int ac, char **av)
 {
-	int pri;
 	ssize_t chars;
 	stack_t *head = NULL;
 
@@ -33,14 +32,7 @@ int main(int ac, char **av)
 
 	while ((chars = getline(&vari.line, &vari.len, vari.fd)) != -1)
 	{
-		pri = principal(&head);
-		if (pri == -1 || vari.status == -1)
-		{
-			free(vari.line);
-			free_list(head);
-			fclose(vari.fd);
-			exit(EXIT_FAILURE);
-		}
+		principal(&head);
 		vari.line_number++;
 	}
 	free(vari.line);
