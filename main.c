@@ -20,6 +20,7 @@ int main(int ac, char **av)
 	if (ac != 2)
 	{
 		dprintf(2, "USAGE: monty file\n");
+		fclose(vari.fd);
 		exit(EXIT_FAILURE);
 	}
 
@@ -27,6 +28,7 @@ int main(int ac, char **av)
 	if (vari.fd == NULL)
 	{
 		dprintf(2, "Error: Can't open file %s\n", av[1]);
+		fclose(vari.fd);
 		exit(EXIT_FAILURE);
 	}
 
