@@ -13,7 +13,7 @@ void pint(stack_t **stack, unsigned int line_number)
 
 	if (*stack == NULL)
 	{
-		dprintf(2, "L%i: can't pint, stack empty", l_n);
+		dprintf(2, "L%i: can't pint, stack empty\n", l_n);
 		free(vari.line);
 		free_list(*vari.head);
 		fclose(vari.fd);
