@@ -16,12 +16,7 @@ int check_number(char *number)
 	for (i = 0; number[i]; i++)
 	{
 		if (number[i] == '-' && i == 0)
-		{
-			if (number[i + 1] >= '0' && number[i + 1] <= '9')
-				continue;
-			else
-				return (1);
-		}
+			continue;
 
 		if (!(number[i] >= '0' && number[i] <= '9'))
 			return (1);
