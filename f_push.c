@@ -15,8 +15,10 @@ void push(stack_t **stack, unsigned int line_number)
 	if (newn == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-		vari.status = -1;
-		return;
+		free(vari.line);
+		free_list(*vari.head);
+		fclose(vari.fd);
+		exit(EXIT_FAILURE);
 	}
 	newn->n = vari.number;
 	newn->prev = NULL;
