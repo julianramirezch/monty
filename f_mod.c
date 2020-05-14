@@ -32,7 +32,7 @@ void mod(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	res = (aux->next->n) * (aux->n);
+	res = (aux->next->n) % (aux->n);
 	(*stack)->next->n = res;
 	pop(stack, line_number);
 }
