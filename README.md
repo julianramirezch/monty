@@ -1,7 +1,7 @@
 # Interpreter For Monty Bytecodes Files
 
 <p align="center">
-   <img src="http://montyscoconut.github.io/assets/ico/avatar.png">
+   <a href="http://montyscoconut.github.io/"><img src="http://montyscoconut.github.io/assets/ico/avatar.png">
 
 <p align="center"> 
 The Monty programming language
