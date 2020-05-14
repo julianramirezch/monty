@@ -1,9 +1,11 @@
+# Interpreter For Monty Bytecodes Files
+
 <p align="center">
 
-# Interpreter For Monty Bytecodes Files
-<p align="center">
 [![](http://montyscoconut.github.io/assets/ico/avatar.png)](http://montyscoconut.github.io/ "Monty Language Interpreter")
+
 <p align="center">
+
 **The Monty programming language**
                 
 ----
