@@ -10,12 +10,19 @@ The Monty programming language
 Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:
 
 ####Installation:
+
 `$ git clone  https://github.com/julianramirezch/monty.git`
+
 ####Compilation:
+
 `$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty`
+
 ####Interpreter:
+
 `$ ./monty bytecodes/00.m `
+
 ####Opcodes:
+
 | Opcode name | Description                    |
 | ------------- | ------------------------------ |
 | `add()`      | adds the top two elements of the stack.       |
