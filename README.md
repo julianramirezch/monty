@@ -43,5 +43,7 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 
 ## Author:
 ----
-Julian Ramirez  <julianramirezch1@gmail.com> 2020
+Julian Ramirez  <julianramirezch1@gmail.com> 
 [![Twitter Follow](https://img.shields.io/twitter/follow/JulianR_30.svg?style=social&label=Follow)](https://twitter.com/JulianR_30)
+
+2020
