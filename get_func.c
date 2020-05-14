@@ -15,6 +15,7 @@ int get_func(void)
 		{"pall", pall},
 		{"push", push},
 		{"pint", pint},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
