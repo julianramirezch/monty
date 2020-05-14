@@ -1,4 +1,4 @@
-# Interpreter For Monty Bytecodes Files
+<H1 align="center"> Interpreter For Monty Bytecodes Files </H1>
 
 <p align="center">
    <a href="http://montyscoconut.github.io/"><img src="http://montyscoconut.github.io/assets/ico/avatar.png"/></a>
