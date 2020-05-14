@@ -1,10 +1,10 @@
 # Interpreter For Monty Bytecodes Files
 
 <p align="center">
-   <img width="460" height="300" src="http://montyscoconut.github.io/assets/ico/avatar.png">
+   <img width="150" height="150" src="http://montyscoconut.github.io/assets/ico/avatar.png">
 
 <p align="center"> 
-**The Monty programming language**
+The Monty programming language
                 
 ----
 **Monty 0.98** is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it.The goal of this project is to create an interpreter for Monty ByteCodes files.
